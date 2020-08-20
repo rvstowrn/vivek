@@ -6,7 +6,7 @@
   <title>Login Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./styles/index-style.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/index_style.css" />
   <style>
     .side-msg{
       text-decoration: none;
@@ -35,6 +35,6 @@
   </main>
   <img src="./assets/blog.jpg">
   <a class="side-msg" href='./register.php'>New to our website. Register here </p>
-  <script src="./scripts/login-script.js"></script>
+  <script src="./scripts/index_script.js"></script>
 </body>
 </html>

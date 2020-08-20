@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./styles/register-style.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/register_style.css" />
     <title>Register Page</title>
     <style>
         .side-msg{
@@ -38,10 +38,10 @@
             <input type='password' id="cpass" placeholder="Retype password" required>
             <label>Phone Number</label>
             <input type="number" id="phone" placeholder="Enter Phone Number" required>
-            <button type="button" onclick="validation()">register</button>
+            <button type="button" onclick="validation()">REGISTER</button>
         </form>
     </div>
     <a class="side-msg" href='./'>Already have an account. Login here</p>
-    <script src="./scripts/register-script.js"></script>
+    <script src="./scripts/register_script.js"></script>
 </body>
 </html>
