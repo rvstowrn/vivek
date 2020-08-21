@@ -49,7 +49,7 @@ const validation = (e) => {
     }
 
     if(validation_flag){
-        alert('validation successfull');
+      document.getElementById("register_form").submit();
     }
 
 }

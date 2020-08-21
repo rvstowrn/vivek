@@ -17,6 +17,6 @@ const validation = (e) => {
     }
     
     if(validation_flag){
-        alert('validation successful');
+        document.getElementById("login_form").submit();
     }
 }

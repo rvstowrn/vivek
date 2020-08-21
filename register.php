@@ -25,19 +25,19 @@
     <h1>Register</h1>
     <div class="flexbox">
         <img src='./assets/register.png'>
-        <form>
+        <form id='register_form' method='post' action='./api/register_api.php'>
             <label>Name</label>
-            <input type='name' id="name" placeholder="Enter name" required >
+            <input type='name' id="name" name="name" placeholder="Enter name" required >
             <label>Email</label>
-            <input type='email' id="email" placeholder="Enter email" required>
+            <input type='email' id="email" name="email" placeholder="Enter email" required>
             <label>Username</label>
-            <input type='username' id="username"  placeholder="Enter username" required>
+            <input type='username' id="username" name="username"  placeholder="Enter username" required>
             <label>Password</label>
-            <input type='password' id="pass" placeholder="Enter password" required>
+            <input type='password' id="pass" name="pass" placeholder="Enter password" required>
             <label>Confirm Password</label>
             <input type='password' id="cpass" placeholder="Retype password" required>
             <label>Phone Number</label>
-            <input type="number" id="phone" placeholder="Enter Phone Number" required>
+            <input type="number" id="phone" name="phone" placeholder="Enter Phone Number" required>
             <button type="button" onclick="validation()">REGISTER</button>
         </form>
     </div>

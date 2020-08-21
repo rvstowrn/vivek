@@ -26,9 +26,9 @@
   <main>
     <ul>
       <li style="font-size:29px;">login</li>
-      <form>
-        <li><b>username</b> <input type="text" placeholder="Enter Username" id="username" name="uname" required></li>
-        <li><b>password</b> <input type="password" placeholder="Enter Password" id="pass" name="psw" required></li>
+      <form id="login_form" method='post' action='./api/login_api.php'>
+        <li><b>username</b> <input type="text" placeholder="Enter Username" id="username" name="username" required></li>
+        <li><b>password</b> <input type="password" placeholder="Enter Password" id="pass" name="pass" required></li>
         <li><button type="button" onclick="validation()">let me in</button></li>
       </form>
     </ul>
