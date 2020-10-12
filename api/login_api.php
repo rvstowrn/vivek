@@ -12,13 +12,23 @@
             $user_row = mysqli_fetch_assoc($result);
             $hash = substr( $user_row['password'], 0, 60 );
             if (password_verify($password,$hash)) {
-                echo "Username : " . $user_row["username"];   
+                if(isset($_POST['remember'])){
+                    setcookie("username", $username, time()+60*60*24, "/");
+                    setcookie("pass", $password, time()+60*60*24, "/");
+                }
+                session_start();
+                $_SESSION['username'] = $username;
+                header("location: ../welcome.php");
+                /* print("<h1>Welcome, $username to our blog!</h1>"); */
+                /* echo "Username : " . $user_row["username"]; */   
             } else {
-                echo 'Invalid password.';
+                /* echo 'Invalid password.'; */
+                header("location: ../index.php");
             }        
         }
         else{
-            echo 'login failed';
+            /* echo 'login failed'; */
+            header("location: ../index.php");
         }
     }
     else{

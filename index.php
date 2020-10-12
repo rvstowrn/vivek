@@ -27,8 +27,10 @@
     <ul>
       <li style="font-size:29px;">login</li>
       <form id="login_form" method='post' action='./api/login_api.php'>
-        <li><b>username</b> <input type="text" placeholder="Enter Username" id="username" name="username" required></li>
-        <li><b>password</b> <input type="password" placeholder="Enter Password" id="pass" name="pass" required></li>
+      <li><b>username</b> <input type="text" placeholder="Enter Username" id="username" name="username" required ></li>
+        <li><b>password</b> <input type="password" placeholder="Enter Password" id="pass" name="pass" required ></li>
+        <br>
+        <li><input type="checkbox" name="remember"> <b>remember me</b></li>
         <li><button type="button" onclick="validation()">let me in</button></li>
       </form>
     </ul>
@@ -38,3 +40,14 @@
   <script src="./scripts/index_script.js"></script>
 </body>
 </html>
+<?php
+if(isset($_COOKIE['username']) and isset($_COOKIE['pass'])){
+    $username = $_COOKIE['username'];
+    $password = $_COOKIE['pass'];
+    echo "<script>
+        document.getElementById('username').value = '$username';
+        document.getElementById('pass').value = '$password';
+    </script>
+    ";
+}
+?>
