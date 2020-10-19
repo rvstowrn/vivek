@@ -6,6 +6,18 @@ const email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$/;
 const password_regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 const alphabet_regex = /^[A-Za-z ]+$/;
 
+const check_username = (e)=>{
+  const username = ext("username");
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("username_validation_text").innerHTML = this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "check_username.php?q=" + username, true);
+  xmlhttp.send();
+}
+
 const validation = (e) => {
 
     let validation_flag = true;

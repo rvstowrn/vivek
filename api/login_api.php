@@ -18,7 +18,7 @@
                 }
                 session_start();
                 $_SESSION['username'] = $username;
-                header("location: ../welcome.php");
+                header("location: ../feed.php");
                 /* print("<h1>Welcome, $username to our blog!</h1>"); */
                 /* echo "Username : " . $user_row["username"]; */   
             } else {

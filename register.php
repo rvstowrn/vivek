@@ -30,8 +30,8 @@
             <input type='name' id="name" name="name" placeholder="Enter name" required >
             <label>Email</label>
             <input type='email' id="email" name="email" placeholder="Enter email" required>
-            <label>Username</label>
-            <input type='username' id="username" name="username"  placeholder="Enter username" required>
+            <label>Username <span id='username_validation_text'>status</span></label>
+            <input type='username' id="username" name="username" onkeyup='check_username()' placeholder="Enter username" required>
             <label>Password</label>
             <input type='password' id="pass" name="pass" placeholder="Enter password" required>
             <label>Confirm Password</label>
