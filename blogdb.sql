@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2020 at 04:42 PM
+-- Generation Time: Oct 19, 2020 at 04:40 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `username` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`) VALUES
+('rvstowrn', 'pass'),
+('rv', 'pass'),
+('aman', 'pass');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -34,6 +54,13 @@ CREATE TABLE `user` (
   `password` varchar(256) NOT NULL,
   `phone` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`name`, `email`, `username`, `password`, `phone`) VALUES
+('Rishabh', 'rd6767@srmist.edu.in', 'rvstowrn', '$2y$12$ggqS5T/2OHTxOVk1tdWmZeg/OQkWiWMhK3wa00E/DWUk/Y6D1BdmG', '7903394122');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
