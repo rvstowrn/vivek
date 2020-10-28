@@ -1,8 +1,9 @@
 <?php
     session_start();
-    echo "<h1>Welcome " . $_SESSION['username'] . " to the blog</h1>";
-    /* echo "<button type='button' href='api/logout.php'>logout</button>"; */
-    echo "<button onclick=window.location.href='api/logout.php';>logout</button><br><br><br><hr><br><br><br>"
+    echo "<nav>
+            <button class='right pink white-text' onclick=window.location.href='api/logout.php';>logout</button>
+            <p class='flow-text'>Welcome " . $_SESSION['username'] . " to the blog</p>
+        </nav>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles/create_blog_style.css" rel="stylesheet">
     <title>Create Blog</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    
 </head>
 <body>
-    <form action="./api/blog_crud_api.php" method="POST">
+    <form id="form" action="./api/blog_crud_api.php" method="POST" enctype="multipart/form-data">
         <h3>Post Content</h3>
         <textarea name='text'></textarea><br><br>
         <input name="img_input" type="file"><br><br>
-        <select name="topic">
-            <option value="">Select Topic</option>
+        <label for="topic">Choose a topic:</label>
+        <select name="topic" id="topic" form="form">
             <option value="cybersecurity">Cybersecurity</option>
             <option value="machine_learning">Machine Learning</option>
             <option value="web_development">Web Development</option>
