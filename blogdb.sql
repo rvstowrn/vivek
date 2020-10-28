@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2020 at 04:40 PM
+-- Generation Time: Oct 28, 2020 at 08:06 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -40,6 +40,28 @@ INSERT INTO `admin` (`username`, `password`) VALUES
 ('rvstowrn', 'pass'),
 ('rv', 'pass'),
 ('aman', 'pass');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `text` text NOT NULL,
+  `img_src` varchar(100) NOT NULL,
+  `author` varchar(100) NOT NULL,
+  `topic` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`text`, `img_src`, `author`, `topic`) VALUES
+('Very first blog of this website', '16038677289593016475f991450bf35d.jpg', 'rvstowrn', 'cybersecurity'),
+('new blog value', '160386805019695195865f991592520fe.jpg', 'rvstowrn', 'machine_learning'),
+('third blog ', '160386825316266310785f99165d091e6.jpg', 'rvstowrn', 'web_development');
 
 -- --------------------------------------------------------
 
