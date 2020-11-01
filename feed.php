@@ -48,7 +48,20 @@
         }
         nav{
             padding-right:20px;
-            
+            text-align:center;
+            margin-bottom:100px;
+        }
+        .side-msg{
+            text-decoration: none;
+            font-size: 20px;
+            position: absolute;
+            top: 75px;
+            right: 30px;
+            color: #444;
+            font-family: cursive;
+        }
+        .side-msg:hover{
+            text-decoration: underline;
         }
     </style>    
 </head>
@@ -75,6 +88,7 @@
         }
 
     ?>
+    <a href="./evaluate.php" class='side-msg'>Evaluate Your Blogging Skill</a>
     <a href='./create_blog.php' class="btn-floating btn-large bottom_side">
         <i class="material-icons">add</i>
     </a>
