@@ -18,6 +18,7 @@
             $sql =  "select * from test order by RAND() limit 5";
             $result = $conn->query($sql);
             $containers = ['blue','red','green','yellow','cyan'];
+            shuffle($containers); 
             $itr = -1;
             while($row = $result->fetch_assoc()) {
                 $itr = $itr + 1;
