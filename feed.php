@@ -63,6 +63,18 @@
         .side-msg:hover{
             text-decoration: underline;
         }
+        .modal-trigger{
+            font-weight:500;
+            position:absolute;
+            bottom:10px;
+        }
+        .left_modal{
+            right:140px;
+        }
+        .right_modal{
+            right:20px;
+        }
+        
     </style>    
 </head>
 <body>
@@ -80,6 +92,8 @@
                             <p class='flow-text topic right'> " . $row["topic"] . " </p>
                             <h6 class='author'> " . $row["author"] . " </h6>
                         </div>
+                        <a class='waves-effect waves-light flat-btn modal-trigger left_modal' onclick='get_comments(`".$row['text']."`,`".$row['author']."`)' href='#view_comments'>View Comments</a>
+                        <a class='waves-effect waves-light flat-btn modal-trigger right_modal' onclick='add_comment(`".$row['text']."`,`".$row['author']."`)' href='#add_comment'>Add Comment</a>
                       </div>";
             }
         }
@@ -92,6 +106,41 @@
     <a href='./create_blog.php' class="btn-floating btn-large bottom_side">
         <i class="material-icons">add</i>
     </a>
+
+    <div id="add_comment" class="modal">
+        <div class="modal-content">
+            <h4>Comment</h4>
+            <input type=text style='width:50%' >
+        </div>
+            <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+    <div id="view_comments" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+            <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    <script>
+        function get_comments(text,author){
+            console.log({text,author});
+        }
+        function add_comment(text,author){
+            console.log({text,author});
+        }
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });
+    
+    </script>
  
 
 </body>
